@@ -26,12 +26,14 @@ namespace ToDoList.Models
         [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
         [DataType(DataType.Date)]
         public DateTime? EndDate { get; set; }
-        [Display(Name = "Статус")]
+        
         [Required]
-        public List<string> status = new List<string>() {"Новая", "Открытая", "Закрытая"};
+        public int StatusId { get; set; }
+        public virtual Status? Status { get; set; }
         [Required]
-        [Display(Name = "Приоритет")]
-        public List<string> Priority = new List<string>() { "Низкий", "Средний", "Высокий" };
+        public int PriorityId { get; set; }
+        public virtual Priority? Priority { get; set; }
+
 
     }
 }

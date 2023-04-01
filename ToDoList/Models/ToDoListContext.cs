@@ -9,4 +9,6 @@ public class ToDoListContext: DbContext
 
     }
     public DbSet<ToDoTask> ToDoLists { get; set; }
+    public DbSet<Status> Statuses { get; set; }
+    public DbSet<Priority> Prioritys { get; set; }
 }
